@@ -65,3 +65,5 @@ src_paths = ["src"]
 
 [tool.setuptools.dynamic]
 version = { attr = "ben.__version__" }
+
+[tool.setuptools_scm]
