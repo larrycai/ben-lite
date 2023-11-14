@@ -3,9 +3,9 @@ import pprint
 import sys
 import numpy as np
 
-import .binary
-import .deck52
-import .scoring
+from ben import binary
+from ben import deck52
+from ben import scoring
 
 from .objects import BidResp, CandidateBid, Card, CardResp, CandidateCard
 from .bidding import bidding
