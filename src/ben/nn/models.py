@@ -3,11 +3,11 @@ import os.path
 
 from configparser import ConfigParser
 
-from nn.player import BatchPlayer, BatchPlayerLefty
-from nn.bidder import Bidder
-from nn.bid_info import BidInfo
-from nn.leader import Leader
-from nn.lead_singledummy import LeadSingleDummy
+from .player import BatchPlayer, BatchPlayerLefty
+from .bidder import Bidder
+from .bid_info import BidInfo
+from .leader import Leader
+from .lead_singledummy import LeadSingleDummy
 
 
 class Models:
