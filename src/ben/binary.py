@@ -1,6 +1,6 @@
 import numpy as np
 
-from bidding import bidding
+from .bidding import bidding
 
 ## input
 #   0:32  player hand
