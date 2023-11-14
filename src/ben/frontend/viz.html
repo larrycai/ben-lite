@@ -1,0 +1,238 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Analyze Deal</title>
+
+  <link rel="stylesheet" href="viz.css">
+  <script type="text/javascript" src="viz.js"></script>  
+
+</head>
+
+<body>
+  
+  <div id="deal">
+
+  <div id="dealer-vuln"></div>
+
+  <div id="north">
+      <div class="suit">
+          <span>&spades;</span>
+      </div>
+      <div class="suit">
+          <span class="font-red">&hearts;</span>
+      </div>
+      <div class="suit">
+          <span class="font-red">&diams;</span>
+      </div>
+      <div class="suit">
+          <span>&clubs;</span>
+      </div>
+  </div>
+  <div id="west">
+      <div class="suit">
+          <span>&spades;</span>
+      </div>
+      <div class="suit">
+          <span class="font-red">&hearts;</span>
+      </div>
+      <div class="suit">
+          <span class="font-red">&diams;</span>
+      </div>
+      <div class="suit">
+          <span>&clubs;</span>
+      </div>
+  </div>
+  <div id="east">
+      <div class="suit">
+          <span>&spades;</span>
+      </div>
+      <div class="suit">
+          <span class="font-red">&hearts;</span>
+      </div>
+      <div class="suit">
+          <span class="font-red">&diams;</span>
+      </div>
+      <div class="suit">
+          <span>&clubs;</span>
+      </div>
+  </div>
+  <div id="south">
+      <div class="suit">
+          <span>&spades;</span>
+      </div>
+      <div class="suit">
+          <span class="font-red">&hearts;</span>
+      </div>
+      <div class="suit">
+          <span class="font-red">&diams;</span>
+      </div>
+      <div class="suit">
+          <span>&clubs;</span>
+      </div>
+  </div>
+
+  <div id="auction"></div>
+  <div id="boardno"></div>
+
+  <div id="current-trick">
+  <div id="trick-card-north" class="trick-card"></div>
+  <div id="trick-card-east" class="trick-card"></div>
+  <div id="trick-card-south" class="trick-card"></div>
+  <div id="trick-card-west" class="trick-card"></div>
+  </div>
+
+
+  <div id="tricks-ns-ew">
+  <div id="tricks-ns" class="trick-count"><span>0</span></div>
+  <div id="tricks-ew" class="trick-count"><span>0</span></div>
+  </div>
+
+  <div id="btn-start" class="button">&gt;&gt;&gt;</div>
+  <div id="btn-start-play" class="button">&lt;&lt;</div>
+  <div id="btn-prev" class="button">&lt;</div>
+  <div id="btn-next" class="button">&gt;</div>
+
+  </div>
+
+  <div id="rebid"></div>
+  <div id="replay"></div>
+  <div id="solver"></div>
+
+  <div><a href="/home">Home</a></div>
+
+  <div id="info"></div>
+
+  <script type="text/javascript">
+
+            const urlParams = new URLSearchParams(location.search)
+                const dealId = urlParams.get("deal")
+
+                const xhr = new XMLHttpRequest()
+                xhr.open("GET", "/api/deals/" + dealId)
+                xhr.send()
+                xhr.onreadystatechange = function (event) {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            try {
+                                const log = JSON.parse(xhr.responseText);
+                                let deal = new Deal(log)
+                                deal.start()
+                                document.getElementById("boardno").innerHTML=deal.board_number()
+                                let auction = new Auction(log['dealer'], log['bids'])
+                                auction.render(document.getElementById("auction"))
+                                let dealerVuln = new DealerVuln(log['dealer'], log['vuln_ns'], log['vuln_ew'])
+                                dealerVuln.render(document.getElementById("dealer-vuln"))
+                                let vul = 'None'
+                                if (deal.data.vuln_ns) {
+                                    if (deal.data.vuln_ew) {
+                                        vul = "Both";
+                                        vulSolver = "All";
+                                    } else {
+                                        vul = 'N-S';
+                                        vulSolver = "NS";
+                                    }
+                                } else if (deal.data.vuln_ew) {
+                                        vul = "E-W";
+                                        vulSolver = "EW";
+                                    } else {
+                                        vul = 'None';
+                                        vulSolver = "None";
+                                    }
+
+                                let dealer = 'NESW'.charAt(deal.data.dealer)
+                                const rebidContent = '<a href="/app/bridge.html?deal=' +
+                                    '(\'' + deal.data.hands + '\', \'' + dealer + ' ' + vul + '\')' +
+                                    '&P=5&board_no=' + deal.board_number() + '"> Bid and play it again </a><br>';
+
+                                document.querySelector('#rebid').innerHTML = rebidContent;
+
+                                const replayContent = '<a href="/app/bridge.html?deal=' +
+                                    '(\'' + deal.data.hands + '\', \'' + dealer + ' ' + vul + ' ' + auction.auctionString +'\')' +
+                                    '&P=5&board_no=' + deal.board_number() + '"> Play it again </a><br>';
+
+                                document.querySelector('#replay').innerHTML = replayContent;
+
+                                var hands = deal.data.hands.split(' ')
+                                const solverContent = '<a href="https://dds.bridgewebs.com/bsol2/ddummy.htm?board=' + deal.board_number()  +
+                                    '&dealer=' + dealer + 
+                                    '&vul=' + vulSolver + '&club=BEN' +
+                                    '&North=' + hands[0] +
+                                    '&East=' + hands[1] +
+                                    '&South=' + hands[2] +
+                                    '&West=' + hands[3] +
+                                    '"> Bridge Solver </a><br>';
+
+                                console.log(solverContent)
+
+                                document.querySelector('#solver').innerHTML = solverContent;
+
+                                let i = 0
+                                log['bids'].forEach(data => {
+                                    document.querySelector('#info').innerHTML += `
+                                        <p class="bid"><strong>Bid:</strong> ${data.bid} ${data.who ? ' by ' +data.who : ''}</p>
+                                        `;
+                                    if (data.candidates.length > 0)
+                                        document.querySelector('#info').innerHTML += `
+                                            <p><strong>Candidates:</strong></p>
+                                            <ul>
+                                                ${data.candidates.map(candidate => `
+                                                    <li>
+                                                        Call: ${candidate.call},
+                                                        ${candidate.expected_score !== undefined ? `Expected score: ${candidate.expected_score},` : ''}
+                                                        ${candidate.insta_score !== undefined ? `NN Score: ${candidate.insta_score},` : ''}
+                                                        ${candidate.adjustment !== undefined ? `Adjusted: ${candidate.adjustment}` : ''}
+                                                    </li>                               
+                                                `).join('')}
+                                            </ul>
+                                            `;
+                                    if (data.hcp && (data.hcp != -1))
+                                        document.querySelector('#info').innerHTML += `
+                                            <p><strong>HCP:</strong> ${data.hcp.join(' - ')}</p>
+                                            <p><strong>Shape:</strong> ${data.shape.join('-')}</p>
+                                            `;
+                                    if (data.samples.length > 0)
+                                        document.querySelector('#info').innerHTML += `
+                                            <h3 class="samples"  onclick="toggleSamples('sampleLines${i}')"><strong>Samples:</strong></h3>
+                                            <div id="sampleLines${i}">
+                                            <ul>${data.samples.map(sample => `<li>${sample}</li>`).join('')}</ul>
+                                            </div>
+                                            `;
+                                    i += 1;
+                                    }
+                                );
+
+                                document.getElementById("btn-next").addEventListener("click", function () {
+                                    deal.next()
+                                })
+
+                                document.getElementById("btn-prev").addEventListener("click", function () {
+                                    deal.prev()
+                                })
+
+                                document.getElementById("btn-start").addEventListener("click", function () {
+                                    deal.start()
+                                })
+
+                                document.getElementById("btn-start-play").addEventListener("click", function () {
+                                    deal.start()
+                                })
+
+
+                            } catch (error) {
+                                console.log(xhr.responseText)
+                                console.log('An error occurred while parsing the JSON:', error);
+                            }
+                        } else {
+                            console.error('Request failed with status:', xhr.status);
+                        }
+                    }
+                }
+
+  </script>
+
+
+</body>
+</html>

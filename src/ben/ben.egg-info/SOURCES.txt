@@ -1,0 +1,435 @@
+.dockerignore
+.gitignore
+Dockerfile
+LICENSE
+README.md
+ben_screenshot.png
+conda_setup.sh
+convention_card.md
+pyproject.toml
+requirements.txt
+setup.py
+start_ben_all.sh
+.github/workflows/docker-image.yml
+UCBC 2024/README.md
+UCBC 2024/BBA convention cards/21GF.bbsa
+UCBC 2024/BBA convention cards/BEN-UCBC.bbsa
+UCBC 2024/BBA convention cards/GIB.bbsa
+UCBC 2024/BBA convention cards/SP3 (bk) single pages.pdf
+UCBC 2024/BBA convention cards/Sayc.bbsa
+UCBC 2024/BBA convention cards/WBridge5.bbsa
+UCBC 2024/Boards/1M-3M blocking.pbn
+UCBC 2024/Boards/1M-3M inviting.pbn
+UCBC 2024/Boards/1X-(1Y)-2Z weak.pbn
+UCBC 2024/Boards/1m opening allows 5M strong.pbn
+UCBC 2024/Boards/1m opening allows 5M.pbn
+UCBC 2024/Boards/2N-opening.pbn
+UCBC 2024/Boards/5431 after 1NT.pbn
+UCBC 2024/Boards/5NT pick a slam.pbn
+UCBC 2024/Boards/Bergen.pbn
+UCBC 2024/Boards/Blackwood 1430.pbn
+UCBC 2024/Boards/Chekback.pbn
+UCBC 2024/Boards/Countd_Adv_needle.pbn
+UCBC 2024/Boards/Cue bid.pbn
+UCBC 2024/Boards/Drury.pbn
+UCBC 2024/Boards/Exclusion.pbn
+UCBC 2024/Boards/Fit showing jumps.pbn
+UCBC 2024/Boards/Forcing 1NT.pbn
+UCBC 2024/Boards/Fourth suit.pbn
+UCBC 2024/Boards/Gambling.pbn
+UCBC 2024/Boards/Gazzilli.pbn
+UCBC 2024/Boards/Gerber.pbn
+UCBC 2024/Boards/Ghestem.pbn
+UCBC 2024/Boards/Inverted minors.pbn
+UCBC 2024/Boards/Jacoby 2NT.pbn
+UCBC 2024/Boards/Jordan Truscott 2NT.pbn
+UCBC 2024/Boards/Kickback 1430.pbn
+UCBC 2024/Boards/King ask by 5NT.pbn
+UCBC 2024/Boards/Leaping Michaels.pbn
+UCBC 2024/Boards/Lebensohl after 1NT.pbn
+UCBC 2024/Boards/Lebensohl after 1m.pbn
+UCBC 2024/Boards/Lebensohl after double.pbn
+UCBC 2024/Boards/Maximal Doubles.pbn
+UCBC 2024/Boards/Michaels Cuebid.pbn
+UCBC 2024/Boards/Minor Suit Stayman after 1NT.pbn
+UCBC 2024/Boards/Minor Suit Stayman after 2NT.pbn
+UCBC 2024/Boards/Minorslam.pbn
+UCBC 2024/Boards/Mixed raise.pbn
+UCBC 2024/Boards/Multi-Landy.pbn
+UCBC 2024/Boards/Namyats.pbn
+UCBC 2024/Boards/Ogust.pbn
+UCBC 2024/Boards/Opener reverses.pbn
+UCBC 2024/Boards/Practice Bidding Scenarios.PBN
+UCBC 2024/Boards/Quantitative 4NT.pbn
+UCBC 2024/Boards/README.md
+UCBC 2024/Boards/Random 100.000.pbn
+UCBC 2024/Boards/Raptor 1NT.pbn
+UCBC 2024/Boards/Responsive double.pbn
+UCBC 2024/Boards/Semi forcing 1NT (2).pbn
+UCBC 2024/Boards/Semi forcing 1NT.pbn
+UCBC 2024/Boards/Slam over 1N.pbn
+UCBC 2024/Boards/Slaming.pbn
+UCBC 2024/Boards/Smolen.pbn
+UCBC 2024/Boards/Snapdragon Double.pbn
+UCBC 2024/Boards/Soloway Jump Shifts.pbn
+UCBC 2024/Boards/Special situations.pbn
+UCBC 2024/Boards/Splinter.pbn
+UCBC 2024/Boards/Support 1NT.pbn
+UCBC 2024/Boards/Support double redouble.pbn
+UCBC 2024/Boards/Texas.pbn
+UCBC 2024/Boards/Two Way New Minor Forcing.pbn
+UCBC 2024/Boards/Two suit takeout double.pbn
+UCBC 2024/Boards/Two way game tries.pbn
+UCBC 2024/Boards/Uncommon boards.pbn
+UCBC 2024/Boards/Unusual 1NT.pbn
+UCBC 2024/Boards/Unusual 2NT.pbn
+UCBC 2024/Boards/Unusual 4NT.pbn
+UCBC 2024/Boards/Weak natural 2D.pbn
+UCBC 2024/Boards/Weak natural 2M.pbn
+UCBC 2024/Boards/cobol_book.pbn
+UCBC 2024/Boards/cobol_mollo.pbn
+UCBC 2024/Boards/kantar_declare_defend.pbn
+UCBC 2024/Conf/UCBC2024.conf
+UCBC 2024/Models/bidding-100000.data-00000-of-00001
+UCBC 2024/Models/bidding-100000.index
+UCBC 2024/Models/bidding-100000.meta
+UCBC 2024/Models/binfo-100000.data-00000-of-00001
+UCBC 2024/Models/binfo-100000.index
+UCBC 2024/Models/binfo-100000.meta
+UCBC 2024/Models/checkpoint
+UCBC 2024/Models/decl-1000000.data-00000-of-00001
+UCBC 2024/Models/decl-1000000.index
+UCBC 2024/Models/decl-1000000.meta
+UCBC 2024/Models/dummy-920000.data-00000-of-00001
+UCBC 2024/Models/dummy-920000.index
+UCBC 2024/Models/dummy-920000.meta
+UCBC 2024/Models/lead-1000000.data-00000-of-00001
+UCBC 2024/Models/lead-1000000.index
+UCBC 2024/Models/lead-1000000.meta
+UCBC 2024/Models/lefty-1000000.data-00000-of-00001
+UCBC 2024/Models/lefty-1000000.index
+UCBC 2024/Models/lefty-1000000.meta
+UCBC 2024/Models/lr3-1000000.data-00000-of-00001
+UCBC 2024/Models/lr3-1000000.index
+UCBC 2024/Models/lr3-1000000.meta
+UCBC 2024/Models/righty-1000000.data-00000-of-00001
+UCBC 2024/Models/righty-1000000.index
+UCBC 2024/Models/righty-1000000.meta
+UCBC 2024/images/BBA.png
+UCBC 2024/images/DDS14.png
+UCBC 2024/images/DDS14Filter.png
+bin/EPBot86.dll
+bin/dds.dll
+bin/libdds.so
+bin/darwin/libdds.so
+demo/demo.html
+demo/favicon.ico
+demo/log.js
+demo/viz.css
+demo/viz.html
+demo/viz.js
+install/README.MD
+install/appserver.spec
+install/bidding_binary.spec
+install/bidding_nn.spec
+install/binfo_binary.spec
+install/binfo_nn.spec
+install/build.cmd
+install/calculate_DCWER.spec
+install/calculate_DDOLAR.spec
+install/game.spec
+install/gameserver.spec
+install/pbn2ben.spec
+install/table_manager_client.spec
+install/dist/RunBen.cmd
+install/dist/RunTMBBA.cmd
+install/dist/RunTMBM.cmd
+install/dist/RunTMBlueChip.cmd
+models/bidding.h5
+models/binfo.h5
+models/decl.h5
+models/dummy.h5
+models/lead.h5
+models/lefty.h5
+models/righty.h5
+models/single_dummy.h5
+models/21gf/21gf-1000000.data-00000-of-00001
+models/21gf/21gf-1000000.index
+models/21gf/21gf-1000000.meta
+models/21gf/checkpoint
+models/21gf/readme.txt
+models/21gf_info/binfo_21gf-500000.data-00000-of-00001
+models/21gf_info/binfo_21gf-500000.index
+models/21gf_info/binfo_21gf-500000.meta
+models/21gf_info/checkpoint
+models/21gf_info/readme.txt
+models/decl_model/checkpoint
+models/decl_model/decl-1000000.data-00000-of-00001
+models/decl_model/decl-1000000.index
+models/decl_model/decl-1000000.meta
+models/dummy_model/checkpoint
+models/dummy_model/dummy-920000.data-00000-of-00001
+models/dummy_model/dummy-920000.index
+models/dummy_model/dummy-920000.meta
+models/gib21_info_model/checkpoint
+models/gib21_info_model/gib21_info-500000.data-00000-of-00001
+models/gib21_info_model/gib21_info-500000.index
+models/gib21_info_model/gib21_info-500000.meta
+models/gib21_model/checkpoint
+models/gib21_model/gib21-1000000.data-00000-of-00001
+models/gib21_model/gib21-1000000.index
+models/gib21_model/gib21-1000000.meta
+models/lead_model_b/checkpoint
+models/lead_model_b/lead-1000000.data-00000-of-00001
+models/lead_model_b/lead-1000000.index
+models/lead_model_b/lead-1000000.meta
+models/lefty_model/checkpoint
+models/lefty_model/lefty-1000000.data-00000-of-00001
+models/lefty_model/lefty-1000000.index
+models/lefty_model/lefty-1000000.meta
+models/lr3_model/checkpoint
+models/lr3_model/lr3-1000000.data-00000-of-00001
+models/lr3_model/lr3-1000000.index
+models/lr3_model/lr3-1000000.meta
+models/precision/checkpoint
+models/precision/precision-1000000.data-00000-of-00001
+models/precision/precision-1000000.index
+models/precision/precision-1000000.meta
+models/precision/readme.txt
+models/precision_info/binfo_precision-500000.data-00000-of-00001
+models/precision_info/binfo_precision-500000.index
+models/precision_info/binfo_precision-500000.meta
+models/precision_info/checkpoint
+models/precision_info/readme.txt
+models/righty_model/checkpoint
+models/righty_model/righty-1000000.data-00000-of-00001
+models/righty_model/righty-1000000.index
+models/righty_model/righty-1000000.meta
+models/sayc/checkpoint
+models/sayc/readme.txt
+models/sayc/sayc-1000000.data-00000-of-00001
+models/sayc/sayc-1000000.index
+models/sayc/sayc-1000000.meta
+models/sayc_info/binfo_sayc-500000.data-00000-of-00001
+models/sayc_info/binfo_sayc-500000.index
+models/sayc_info/binfo_sayc-500000.meta
+models/sayc_info/checkpoint
+models/sayc_info/readme.txt
+models/withsystem/SAYC/bidding-1000000.data-00000-of-00001
+models/withsystem/SAYC/bidding-1000000.index
+models/withsystem/SAYC/bidding-1000000.meta
+models/withsystem/SAYC/binfo-500000.data-00000-of-00001
+models/withsystem/SAYC/binfo-500000.index
+models/withsystem/SAYC/binfo-500000.meta
+models/withsystem/SAYC/checkpoint
+models/withsystem/SAYC/readme.txt
+models/wj/checkpoint
+models/wj/readme.txt
+models/wj/wj-1000000.data-00000-of-00001
+models/wj/wj-1000000.index
+models/wj/wj-1000000.meta
+models/wj_info/binfo_wj-500000.data-00000-of-00001
+models/wj_info/binfo_wj-500000.index
+models/wj_info/binfo_wj-500000.meta
+models/wj_info/checkpoint
+models/wj_info/readme.txt
+scripts/data/SAYC/bidder-data.tar.xz
+scripts/data/SAYC/convert2benformat.py
+scripts/data/SAYC/train-Board.txt
+scripts/data/SAYC/train.cmd
+scripts/data/SAYC/training.txt
+scripts/data/TableMonitor/From Jack 2.pbn
+scripts/data/TableMonitor/input.ben
+scripts/data/TableMonitor/pbn2training.py
+scripts/data/TableMonitor/training.pbn
+scripts/data/TableMonitor/training.txt
+scripts/data/TableMonitor/training2pbn.py
+scripts/data/epbot/BBA_Training.ben
+scripts/data/epbot/Module1.vb
+scripts/data/epbot/README.md
+scripts/data/epbot/ben2pbn.py
+scripts/data/epbot/epbot_input_sample.txt
+scripts/data/epbot/epbot_output_sample.txt
+scripts/data/epbot/epbot_to_bidding_data.py
+scripts/data/epbot/input.ben
+scripts/data/epbot/printdealtraining.py
+scripts/data/epbot/training.txt
+scripts/data/epbot/training2pbn.py
+scripts/data/epbot/html/viz.css
+scripts/data/epbot/html/viz.js
+scripts/data/gib/README.md
+scripts/data/gib/gib.txt
+scripts/data/gib/gib_to_training.py
+scripts/data/gib/input.gib
+scripts/data/gib/output.gib
+scripts/data/gib/output.txt
+scripts/data/gib/parse_gib_output.py
+scripts/data/gib/training.txt
+scripts/data/gib/training_set.py
+scripts/match/bidding/C.conf
+scripts/match/bidding/E.conf
+scripts/match/bidding/README.md
+scripts/match/bidding/auction.py
+scripts/match/bidding/compare.py
+scripts/match/bidding/create_set.py
+scripts/match/bidding/eamon.cmd
+scripts/match/bidding/generateall.cmd
+scripts/match/bidding/lead.py
+scripts/match/bidding/match.cmd
+scripts/match/bidding/match.sh
+scripts/match/bidding/pbn2set.py
+scripts/match/bidding/printdeal.py
+scripts/match/bidding/printmatch.py
+scripts/match/bidding/printmatchashtml.py
+scripts/match/bidding/printmatchpbnashtml.py
+scripts/match/bidding/score.py
+scripts/match/bidding/set0001.txt
+scripts/match/bidding/set0010.txt
+scripts/match/bidding/vs.cmd
+scripts/training/README.md
+scripts/training/bidding/README.md
+scripts/training/bidding/bidding_binary.py
+scripts/training/bidding/bidding_nn.py
+scripts/training/bidding/bidding_nn_continue.py
+scripts/training/bidding/bidding_nn_tf2.py
+scripts/training/bidding/bidding_nn_tf2xx.py
+scripts/training/bidding/build.cmd
+scripts/training/bidding/default.conf
+scripts/training/bidding/default_tf2.conf
+scripts/training/bidding/input.ben
+scripts/training/bidding/testrun.py
+scripts/training/bidding_info/DisplayInfoForOpeningBids.py
+scripts/training/bidding_info/binfo_binary.py
+scripts/training/bidding_info/binfo_nn.py
+scripts/training/bidding_info/binfo_nn_tf2.py
+scripts/training/bidding_info/build.cmd
+scripts/training/bidding_info/default.conf
+scripts/training/bidding_info/default_tf2.conf
+scripts/training/data/10000deals.ben
+scripts/training/data/10000deals.txt
+scripts/training/data/17deals.ben
+scripts/training/data/1deal.ben
+scripts/training/data/1deal.txt
+scripts/training/data/BEN Lead evaluation.PBN
+scripts/training/data/input.ben
+scripts/training/data/match14.pbn
+scripts/training/data/Jack/1deal.txt
+scripts/training/data/Jack/BW5C_N.ben
+scripts/training/data/Jack/BW5C_N.txt
+scripts/training/data/Jack/BW5C_S.ben
+scripts/training/data/Jack/BW5C_S.txt
+scripts/training/data/Jack/BW5C_Total.ben
+scripts/training/data/Jack/JOS_N.ben
+scripts/training/data/Jack/JOS_N.txt
+scripts/training/data/Jack/JOS_S.ben
+scripts/training/data/Jack/JOS_S.txt
+scripts/training/data/Jack/JOS_Total.ben
+scripts/training/data/Jack/jack_to_deal_auction.py
+scripts/training/data/bidding_data/1N2NOpening.txt
+scripts/training/data/bidding_data/2NOpening.txt
+scripts/training/data/bidding_data/bidding_data.txt
+scripts/training/data/bidding_data/bidding_data.zip
+scripts/training/data/bidding_data/printdealtraining.py
+scripts/training/data/bidding_data/selectdata.py
+scripts/training/data/bidding_data/GIB/input.gib
+scripts/training/opening lead/DDOLAR.MD
+scripts/training/opening lead/README.MD
+scripts/training/opening lead/batcher.py
+scripts/training/opening lead/binary_lead.py
+scripts/training/opening lead/calculate_DDOLAR.py
+scripts/training/opening lead/data_access.py
+scripts/training/opening lead/lead_binary_util.py
+scripts/training/opening lead/lead_nn.py
+scripts/training/opening lead/lead_nn_tf2.py
+scripts/training/playing/Playing.MD
+scripts/training/playing/README.MD
+scripts/training/playing/batcher.py
+scripts/training/playing/binary_decl.py
+scripts/training/playing/binary_dummy.py
+scripts/training/playing/binary_lefty.py
+scripts/training/playing/binary_righty.py
+scripts/training/playing/build.cmd
+scripts/training/playing/calculate_DCWER.py
+scripts/training/playing/calculate_DDOLAR.py
+scripts/training/playing/data_access.py
+scripts/training/playing/decl_nn.py
+scripts/training/playing/decl_nn_tf2.py
+scripts/training/playing/dummy_nn.py
+scripts/training/playing/dummy_nn_tf2.py
+scripts/training/playing/lead_binary_util.py
+scripts/training/playing/lefty_nn.py
+scripts/training/playing/lefty_nn_tf2.py
+scripts/training/playing/righty_nn.py
+scripts/training/playing/righty_nn_tf2.py
+scripts/training/single dummy/batcher.py
+scripts/training/single dummy/binary_lead.py
+scripts/training/single dummy/binary_lr3.py
+scripts/training/single dummy/data_access.py
+scripts/training/single dummy/lead_binary_util.py
+scripts/training/single dummy/lr3_nn.py
+scripts/training/single dummy/lr3_nn_tf2.py
+src/ben/__init__.py
+src/ben/analysis.py
+src/ben/appserver.py
+src/ben/batcher.py
+src/ben/binary.py
+src/ben/boards.pbn
+src/ben/bots.py
+src/ben/claim.py
+src/ben/conf.py
+src/ben/deck52.py
+src/ben/game.py
+src/ben/gameserver.py
+src/ben/human.py
+src/ben/objects.py
+src/ben/pbn.py
+src/ben/pbn2ben.py
+src/ben/sample.py
+src/ben/scoring.py
+src/ben/table_manager_client.py
+src/ben/util.py
+src/ben.egg-info/PKG-INFO
+src/ben.egg-info/SOURCES.txt
+src/ben.egg-info/dependency_links.txt
+src/ben.egg-info/requires.txt
+src/ben.egg-info/top_level.txt
+src/ben/bba/BBA.py
+src/ben/bba/__init__.py
+src/ben/bidding/__init__.py
+src/ben/bidding/bidding.py
+src/ben/bidding/binary.py
+src/ben/config/E.conf
+src/ben/config/T.conf
+src/ben/config/default.conf
+src/ben/config/default_tf2.conf
+src/ben/config/sayc.conf
+src/ben/ddsolver/dds.py
+src/ben/ddsolver/ddsolver.py
+src/ben/examples/Bidding.ipynb
+src/ben/examples/CardByCardAnalysis.ipynb
+src/ben/examples/OpeningLead-hf.ipynb
+src/ben/examples/OpeningLead.ipynb
+src/ben/examples/SingleDummyEstimates.ipynb
+src/ben/examples/bidding_info.ipynb
+src/ben/examples/bidding_info_h5.ipynb
+src/ben/examples/install_matplotlib.ipynb
+src/ben/frontend/bridge.html
+src/ben/frontend/bridge.js
+src/ben/frontend/favicon.ico
+src/ben/frontend/style.css
+src/ben/frontend/viz.css
+src/ben/frontend/viz.html
+src/ben/frontend/viz.js
+src/ben/nn/__init__.py
+src/ben/nn/bid_info.py
+src/ben/nn/bid_info_tf2.py
+src/ben/nn/bidder.py
+src/ben/nn/bidder_tf2.py
+src/ben/nn/lead_singledummy.py
+src/ben/nn/lead_singledummy_tf2.py
+src/ben/nn/leader.py
+src/ben/nn/leader_tf2.py
+src/ben/nn/models.py
+src/ben/nn/models_tf2.py
+src/ben/nn/player.py
+src/ben/nn/player_tf2.py
