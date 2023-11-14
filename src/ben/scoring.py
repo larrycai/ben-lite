@@ -1,7 +1,7 @@
 import functools
 import numpy as np
 
-from bidding import bidding
+from .bidding import bidding
 
 TRICK_VAL = {'C': 20, 'D': 20, 'H': 30, 'S': 30, 'N': 30}
 
