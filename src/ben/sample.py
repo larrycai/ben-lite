@@ -2,12 +2,12 @@ import time
 
 import numpy as np
 
-import binary
+from ben import binary
 
-from bidding import bidding
-from util import get_all_hidden_cards
+from .bidding import bidding
+from .util import get_all_hidden_cards
 from configparser import ConfigParser
-from util import hand_to_str
+from .util import hand_to_str
 
 def get_small_out_i(small_out):
     x = small_out.copy()
