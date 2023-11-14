@@ -3,16 +3,16 @@ import pprint
 import sys
 import numpy as np
 
-import binary
-import deck52
-import scoring
+import .binary
+import .deck52
+import .scoring
 
-from objects import BidResp, CandidateBid, Card, CardResp, CandidateCard
-from bidding import bidding
-from sample import Sample
-from binary import parse_hand_f
+from .objects import BidResp, CandidateBid, Card, CardResp, CandidateCard
+from .bidding import bidding
+from .sample import Sample
+from .binary import parse_hand_f
 
-from util import hand_to_str, expected_tricks, p_make_contract, follow_suit
+from .util import hand_to_str, expected_tricks, p_make_contract, follow_suit
 
 
 class BotBid:
